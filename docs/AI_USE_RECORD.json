@@ -1,0 +1,31 @@
+{
+  "prepared_date": "2026-11-17",
+  "provider": "OpenAI",
+  "product": "ChatGPT Work",
+  "analysis_archive_date": "2026-11-16",
+  "current_manuscript_work_dates": [
+    "2026-11-16",
+    "2026-11-17"
+  ],
+  "exact_historical_model_identifier": null,
+  "exact_product_build": null,
+  "model_version_status": "not retained in supplied archive; requires historical session/product evidence",
+  "uses": [
+    "code development",
+    "cloud Python execution assistance",
+    "analysis verification",
+    "literature discovery",
+    "interpretation support",
+    "figure preparation",
+    "manuscript drafting and revision"
+  ],
+  "verified_execution_platform": "cloud Python scripts and in-process IPython notebook execution",
+  "google_colab_execution_status": "not established; supplied notebook explicitly states that its optional Colab Drive-export cell was not executed",
+  "source_evidence": [
+    "provenance/software_environment.json",
+    "original notebook metadata inspected in private source archive",
+    "original notebook introductory markdown and optional Colab export cell inspected"
+  ],
+  "authorship": "sole human author confirmed by author; AI is not an author",
+  "human_final_review": "pending explicit final approval of complete manuscript"
+}

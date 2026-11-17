@@ -1,0 +1,9 @@
+comparison,variable,test,statistic,p
+between_centers,AGE_AT_SCAN,Kruskal-Wallis,363.11280286446964,1.8996969385263894e-67
+between_centers,func_mean_fd,Kruskal-Wallis,163.57612065302723,1.601862290744766e-26
+between_centers,n_frames,Kruskal-Wallis,796.2413395787646,4.0155654877568675e-159
+between_centers,func_dvars,Kruskal-Wallis,515.1427256025407,2.1083807859502862e-99
+between_centers,func_outlier,Kruskal-Wallis,382.5548549191333,1.6390315702933517e-71
+between_centers,SEX,chi-square,64.46447135458678,9.105780907791531e-08
+between_centers,DX_GROUP,chi-square,18.365515448933998,0.3029317832834808
+between_centers,has_missing_edges,chi-square,201.75866243487988,3.4973811396865344e-34

@@ -1,0 +1,60 @@
+{
+  "status": "Locked before full-cohort model evaluation; informed by earlier 96-person pilot, not preregistered",
+  "dataset": "ABIDE I PCP C-PAC filt_noglobal rois_ho",
+  "eligibility": "DX_GROUP 1 or 2; valid FILE_ID; finite mean FD between 0 and 0.30 mm inclusive; no fail in qc_rater_1, qc_anat_rater_2, qc_func_rater_2, qc_anat_rater_3, qc_func_rater_3; finite ROI time series with 111 consistent labels and >=70 frames. Maybe/missing ratings retained and reported. Invalid age/sex set missing, train-only median imputation.",
+  "centers": "SITE_ID with UM_1/UM_2, UCLA_1/UCLA_2, LEUVEN_1/LEUVEN_2 merged by institution; all other IDs unchanged",
+  "features": [
+    "demographic: age, sex, mean FD",
+    "connectome: 6105 Fisher-z Pearson edges",
+    "combined"
+  ],
+  "outer_cv": "LeaveOneGroupOut by institution-level center; every participant held out exactly once",
+  "inner_cv": "GroupKFold(3) by institution-level center restricted to each outer training set; mean fold ROC-AUC hyperparameter objective",
+  "preprocessing": "Train-only median imputation, zero for entirely absent train columns; StandardScaler; fixed randomized PCA(32, seed 2026) on connectome then rescale. Separate demo imputation/scaling. No fitted whole-cohort harmonization. No test-driven threshold or feature selection.",
+  "grids": {
+    "LR": {
+      "C": [
+        0.1,
+        1,
+        10
+      ],
+      "solver": "liblinear",
+      "class_weight": "balanced"
+    },
+    "SVM": {
+      "C": [
+        0.1,
+        1,
+        10
+      ],
+      "kernel": [
+        "linear",
+        "rbf"
+      ],
+      "probability": false,
+      "class_weight": "balanced"
+    },
+    "RF": {
+      "n_estimators": 200,
+      "max_depth": [
+        5,
+        null
+      ],
+      "min_samples_leaf": 3,
+      "class_weight": "balanced"
+    }
+  },
+  "primary_endpoint": "Equal-center mean ROC-AUC of held-out predictions; combined minus demographic paired difference for LR, SVM, RF",
+  "secondary": "Equal-center and pooled balanced accuracy, ASD F1, sensitivity, specificity; pooled AUC descriptive due cross-fold score scaling; per-center confusion matrices",
+  "uncertainty": "10000 paired center bootstrap resamples for macro metrics and differences, conditional on fitted predictions; per-center stratified participant bootstrap 2000; uncertainty excludes retraining variation",
+  "inference": "Exact paired site-level sign-flip test for primary AUC differences when <=20 centers, Holm across the 3 primary models. Secondary pairwise comparisons exploratory, Holm within family. No case-level DeLong test treating overlapping CV fits as independent.",
+  "sensitivities": {
+    "complete_case": "Drop participants with any missing connectome edge, rerun all 9 conditions",
+    "drop_roi3455": "Remove pilot-identified constant ROI #3455 edges a priori, keep all primary participants; rerun all 9 conditions",
+    "low_motion": "Primary participants mean FD<=0.20 mm; rerun LR 3 feature groups",
+    "pca8": "Primary participants; fixed 8 components; rerun LR 3 feature groups",
+    "strict_manual": "Primary participants all 5 manual ratings OK; rerun LR 3 feature groups"
+  },
+  "confounding_checks": "Site/class age, sex, FD, QC/missingness summaries; age sex FD effects on missingness adjusted for center with binomial GLM; train-only age/sex/FD linear residualization of edges as additional LR connectome sensitivity; no causal interpretation",
+  "limitations": "Secondary analysis; pilot-informed fixed choices; no independent ABIDE II validation, no clinical utility claim, no test-driven result optimization. No full-pipeline permutation significance claimed. Ethics status, authorship, funding and AI disclosure require author review before submission."
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "conditions": 37,
+  "predictions": 28055,
+  "outer_evaluations": 626,
+  "bootstrap_site_resamples": 10000,
+  "per_center_resamples": 2000,
+  "uncertainty": "conditional on fitted CV predictions; overlapping training fits not accounted for; sign-flip tests exploratory"
+}

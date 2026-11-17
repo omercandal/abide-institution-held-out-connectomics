@@ -1,0 +1,20 @@
+{
+  "phenotypic_n": 1112,
+  "metadata_download_n": 951,
+  "primary_n": 830,
+  "sequential_reasons": {
+    "eligible_metadata": 830,
+    "manual_quality_fail": 121,
+    "missing_invalid_or_FD_over_0.30": 84,
+    "no_preprocessed_filename": 77
+  },
+  "sites": 20,
+  "classes": {
+    "2": 454,
+    "1": 376
+  },
+  "missing_edge_subjects": 191,
+  "metadata_sha256": "009f01a89697113e5375ded4fbcff4c85e89a4daa6d13e63c21ae5d57dda0865",
+  "site_field_definition": "sites counts original SITE_ID labels; institution-level validation groups = 17",
+  "institution_validation_groups": 17
+}

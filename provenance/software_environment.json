@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.3",
+    "python-docx": "1.2.0",
+    "statsmodels": "0.14.6",
+    "patsy": "1.0.2"
+  },
+  "model_execution": "cloud Python scripts; source logged, 37 conditions, 626 outer evaluations",
+  "notebook_execution": "in-process IPython; actual executed cells, sockets unavailable",
+  "date": "2026-11-16",
+  "publication_draft": "not submitted; author declarations and independent review pending"
+}

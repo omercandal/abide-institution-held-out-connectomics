@@ -1,0 +1,16 @@
+{
+  "prepared_date": "2026-11-17",
+  "source_archive": "ABIDE_Full_Research_Package.zip",
+  "original_manifest_entries_checked": 230,
+  "manifest_mismatches": 0,
+  "original_scientific_source_sha256": {
+    "code/01_cohort.py": "0b865bcba3e8041c83f371a7d8f3bc88fcf5360cad1a50afb0fb7e028c9c9402",
+    "code/02_models.py": "9d5f6d4cb73722bd96f81d355c2b9eb42706a15762359c538f7c435f2f197837",
+    "code/03_statistics.py": "aaeaa46c568ae73efcf1b04bd6c68691f5017d81ba8ff9a9e21b368e8a510a62",
+    "code/04_figures.py": "bc26a90873cbd2ff581e98c43d7c582de709ff160613eea97dbb2ba431eaab00"
+  },
+  "changes": "Added runner, aggregate validator and packaging documentation. Scientific scripts and aggregate result files copied without scientific changes. Original manuscript generator, notebook generator and private participant-level working records excluded.",
+  "full_source_rerun_performed_for_release": false,
+  "public_repository_created": false,
+  "DOI_assigned": false
+}
