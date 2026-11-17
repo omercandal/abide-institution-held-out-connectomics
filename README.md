@@ -97,11 +97,15 @@ ABIDE I publication: https://doi.org/10.1038/mp.2013.78
 
 The ABIDE source page identifies CC BY-NC-SA 3.0 and non-commercial research
 conditions. These source rights are not replaced by this repository.
-No source participant records are redistributed here. No open-source or
-data license is granted by this unpublished release candidate: the author
-must approve the code-license choice and confirm the applicable terms for
-aggregate outputs before public release. docs/RELEASE_APPROVAL.md records
-the proposed decision points. There is no DOI or public repository URL yet.
+No source participant records are redistributed here. Original analysis code
+and associated usage documentation are licensed under MIT; see LICENSE and
+LICENSING.md for the exact scope. The license does not relicense ABIDE/PCP
+data, aggregate results, figures, or third-party materials.
+
+Public repository:
+https://github.com/omercandal/abide-institution-held-out-connectomics
+The initial reviewed scientific package is commit
+1d655a97bb0f0c6b636aff44cfd2a845cd327208. No DOI has been minted.
 
 ## Attribution and AI assistance
 
